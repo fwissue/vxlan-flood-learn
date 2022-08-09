@@ -61,7 +61,7 @@ interface Vlan1
 interface nve1
   no shutdown
   source-interface loopback1
-  member vni 5000 mcast-group 230.1.1.1
+  member vni 5000 mcast-group 239.1.1.1
 
 interface Ethernet2/1
   no switchport
