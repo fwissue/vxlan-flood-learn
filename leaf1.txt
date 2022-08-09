@@ -4,6 +4,8 @@
 version 7.3(0)D1(1)
 power redundancy-mode redundant
 license grace-period
+poweroff module 3
+poweroff module 4
 
 hostname leaf1
 vdc leaf1 id 1
@@ -47,9 +49,9 @@ snmp-server enable traps link
 
 ip pim rp-address 4.4.4.4 group-list 224.0.0.0/4
 ip pim ssm range 232.0.0.0/8
-vlan 1,1000
-vlan 1000
-  vn-segment 5000
+vlan 1,100
+vlan 100
+  vn-segment 1000
 
 vrf context management
 
@@ -73,13 +75,13 @@ interface Ethernet2/1
 
 interface Ethernet2/2
   switchport
-  switchport access vlan 1000
+  switchport access vlan 100
   mtu 9216
   no shutdown
 
 interface Ethernet2/3
   switchport
-  switchport access vlan 1000
+  switchport access vlan 100
   no shutdown
 
 interface Ethernet2/4
